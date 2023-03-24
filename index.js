@@ -68,7 +68,8 @@ app.post("/article", function (req, res) {
         dataAsObject.push({
             id: dataAsObject.length,
             name: req.body.name,
-            rating: req.body.rating,
+            ean: req.body.ean,
+            url: req.body.url,
         });
         fs.writeFile(filename, JSON.stringify(dataAsObject), () => {
             res.writeHead(200, {
